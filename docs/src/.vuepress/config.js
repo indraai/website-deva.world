@@ -9,7 +9,7 @@ module.exports = {
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
   description: description,
-
+  base: '/',
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
@@ -50,8 +50,8 @@ module.exports = {
         link: '/habitat/',
       },
       {
-        text: 'Features',
-        link: '/features/',
+        text: 'Docs',
+        link: '/docs/',
       },
       {
         text: 'License',
@@ -72,18 +72,23 @@ module.exports = {
           title: 'Agents',
           collapsable: false,
           children: [
-            '',
+            'agent-protocol',
+            'agent-mind',
             'agent-deva',
             'agent-indra',
             'agent-security',
             'agent-medic',
-            'agent-knowledge',
-            'agent-simulator',
-            'agent-incubator',
             'agent-evolution',
             'agent-concept',
+            'agent-simulator',
+            'agent-incubator',
+            'agent-trainer',
+            'agent-knowledge',
             'agent-correction',
+            'agent-reputation',
+            'agent-reward',
             'agent-audit',
+            'agent-report',
             'agent-error',
           ]
         }
@@ -93,7 +98,6 @@ module.exports = {
           title: 'Engines',
           collapsable: false,
           children: [
-            '',
             'engine-evolution',
             'engine-concept',
             'engine-together',
@@ -105,7 +109,6 @@ module.exports = {
           title: 'License',
           collapsable: false,
           children: [
-            '',
             'license-beginner',
             'license-intermediate',
             'license-advanced',
@@ -113,14 +116,14 @@ module.exports = {
           ]
         }
       ],
-      '/features/': [
+      '/docs/': [
         {
-          title: 'Features',
+          title: 'Docs',
           collapsable: false,
           children: [
-            '',
-            'feature-whitepaper',
-            'feature-quantum',
+            'doc-features',
+            'doc-whitepaper',
+            'doc-quantum',
           ]
         }
       ],
@@ -129,7 +132,6 @@ module.exports = {
           title: 'Contact',
           collapsable: false,
           children: [
-            '',
             'contact-investor',
             'contact-partner',
           ]

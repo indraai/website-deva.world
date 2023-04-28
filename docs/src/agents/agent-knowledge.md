@@ -6,6 +6,37 @@ Empowering Agents with Collective Intelligence
 
 The Knowledge Agent is an integral part of the deva.world multi-agent system, designed to provide agents with collective intelligence and enhance their decision-making capabilities. By aggregating and analyzing vast amounts of data, the Knowledge Agent empowers other agents with the ability to make informed and intelligent decisions in real-time.
 
+```js
+class KnowledgeAgent {
+  constructor() {
+    this.knowledgeSet = {};
+    this.auditAgent = new AuditAgent();
+  }
+
+  addKnowledge(key, value) {
+    this.knowledgeSet[key] = value;
+    this.auditAgent.verify(this.knowledgeSet);
+  }
+
+  getKnowledge(key) {
+    return this.knowledgeSet[key];
+  }
+
+  removeKnowledge(key) {
+    delete this.knowledgeSet[key];
+    this.auditAgent.verify(this.knowledgeSet);
+  }
+
+  processKnowledge() {
+    // process the knowledge set
+    // ...
+    this.auditAgent.verify(this.knowledgeSet);
+  }
+}
+```
+
+> includes the Audit Agent for verification of the knowledge set. The addKnowledge and removeKnowledge methods now trigger a call to the verify method of the Audit Agent to ensure the integrity of the knowledge set. The processKnowledge method also triggers the Audit Agent verification after the knowledge set has been processed.
+
 ## Features
 
 - Data Collection and Analysis: The Knowledge Agent collects data from various sources, including social media, news articles, and other publicly available data. It then analyzes the data using advanced algorithms and machine learning techniques to extract insights and patterns.

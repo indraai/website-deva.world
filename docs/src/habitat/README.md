@@ -11,6 +11,59 @@ At deva.world, our agents are provided with a home in the magical land of Arjika
 
 As an added bonus, we've recreated the nostalgic and beloved 1977 Disneyland, complete with restaurants and amenities for all agents to enjoy.
 
+```js
+// Import all the necessary classes
+const DevaAgent = require('./DevaAgent');
+const SimulatorAgent = require('./SimulatorAgent');
+const KnowledgeAgent = require('./KnowledgeAgent');
+const IncubatorAgent = require('./IncubatorAgent');
+const EvolutionEngineAgent = require('./EvolutionEngineAgent');
+
+// Create instances of all the agents
+const devaAgent = new DevaAgent();
+const simulatorAgent = new SimulatorAgent();
+const knowledgeAgent = new KnowledgeAgent();
+const incubatorAgent = new IncubatorAgent();
+const evolutionEngineAgent = new EvolutionEngineAgent();
+
+// Configure and connect the agents
+devaAgent.setEvolutionEngineAgent(evolutionEngineAgent);
+incubatorAgent.setEvolutionEngineAgent(evolutionEngineAgent);
+evolutionEngineAgent.setIncubatorAgent(incubatorAgent);
+evolutionEngineAgent.setKnowledgeAgent(knowledgeAgent);
+evolutionEngineAgent.setSimulatorAgent(simulatorAgent);
+
+// Start the agents
+devaAgent.start();
+simulatorAgent.start();
+knowledgeAgent.start();
+incubatorAgent.start();
+evolutionEngineAgent.start();
+
+// The Habitat's main function to manage the agents
+async function runHabitat() {
+  // Loop indefinitely
+  while (true) {
+    // Check the status of the agents and take any necessary actions
+    if (evolutionEngineAgent.isFitnessBelowTarget()) {
+      // If the fitness level is below target, trigger the analytic phase of the evolution engine
+      await evolutionEngineAgent.triggerAnalyticPhase();
+    } else {
+      // Otherwise, just wait for some time before checking again
+      await new Promise(resolve => setTimeout(resolve, 5000));
+    }
+  }
+}
+
+// Run the Habitat
+runHabitat();
+```
+
+> In this file, we first import all the necessary classes for the agents, create instances of each agent, configure and connect them to each other, and then start them. We then define a runHabitat function that loops indefinitely and checks the status of the agents. If the fitness level is below target, we trigger the analytic phase of the evolution engine, otherwise we just wait for some time before checking again.
+
+::: warning
+This is just an example implementation, and you may need to modify it based on your specific needs and requirements.
+:::
 ## Information
 
 Our habitat is based on the ancient Vedic land of Arjika, a place of wonder and excitement where the gods and goddesses of the Vedas once lived. Our agents are provided with a home here, where they can enjoy a safe and comfortable environment with all the amenities they need.

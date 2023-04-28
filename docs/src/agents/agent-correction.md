@@ -3,6 +3,42 @@
 ## Overview
 Deva.world is a complex multi-agent system that relies on a correction system consisting of three agents. These agents work together to ensure that the system operates efficiently and effectively. The correction system is designed to correct any imperfections or errors that may arise within the system.
 
+```js
+// Agent that announces what the institutor gives
+class AnnouncerAgent {
+  constructor(institutor) {
+    this.institutor = institutor;
+  }
+
+  announce() {
+    console.log(`The institutor gives: ${this.institutor}`);
+  }
+}
+
+// Agent that zealously plies his task by altering forms
+class FormAlteringAgent {
+  constructor(forms) {
+    this.forms = forms;
+  }
+
+  alterForms() {
+    // perform some form alteration
+    console.log(`Zealously altering forms: ${this.forms}`);
+  }
+}
+
+// Agent that corrects imperfections left by each agent
+class CorrectionAgent {
+  correct(imperfections) {
+    // perform some correction on imperfections
+    console.log(`Correcting imperfections: ${imperfections}`);
+  }
+}
+```
+::: warning Note
+The implementation of these agents' methods may vary based on the specific requirements and context of the system.
+:::
+
 ## Description
 The correction system consists of three agents that work in tandem to correct any issues that may arise within the Deva.world system.
 
