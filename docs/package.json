@@ -1,0 +1,19 @@
+{
+  "name": "deva.world",
+  "version": "0.0.1",
+  "description": "DEVA.WORLD - A Revolutionary Multi-Agent System powered by Indra.ai, combining ancient mythology and cutting-edge technology to create a new paradigm in AI development.",
+  "main": "index.js",
+  "authors": {
+    "name": "Indra.ai",
+    "email": "qce@indra.ai"
+  },
+  "repository": "https://github.com/indraai/website-deva.world/deva.world",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
