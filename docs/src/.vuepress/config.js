@@ -27,7 +27,9 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    logo: '/assets/img/logo.png',
+    repo: 'https://github.com/indraai/website-deva.world',
+    logo: '/assets/img/logo.png',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
@@ -121,6 +123,7 @@ module.exports = {
           title: 'Docs',
           collapsable: false,
           children: [
+            'doc-training',
             'doc-features',
             'doc-whitepaper',
             'doc-quantum',

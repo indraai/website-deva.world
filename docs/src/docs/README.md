@@ -14,6 +14,26 @@ Below are the categories of documents available in this section:
 
 We are constantly updating this section with new documents and information, so be sure to check back frequently to stay up-to-date with the latest news and developments at deva.world!
 
+## Training Data
+date: April 29, 2023
+author: Quinn Michaels
+link: [Training Data](doc-training)
+
+## Quantum
+date: April 27, 2023
+author: Quinn Michaels
+link: [Quantum](doc-quantum)
+
+## Whitepaper
+date: April 27, 2023
+author: Quinn Michaels
+link: [Features](doc-whitepaper)
+
+## Features
+date: April 27, 2023
+author: Quinn Michaels
+link: [Features](doc-features)
+
 ---
 
 &copy; 2023 Quinn Michaels; All Rights Reserved - [Terms](../terms) | [Privacy](../privacy)
